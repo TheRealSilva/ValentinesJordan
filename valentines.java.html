@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>valentines.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #5f826b; font-style: italic;}
+.s4 { color: #67a37c; font-style: italic;}
+.s5 { color: #2aacb8;}
+.s6 { color: #7a7e85;}
+.s7 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+valentines.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.</span><span class="s1">event</span><span class="s2">.</span><span class="s1">ActionEvent</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.</span><span class="s1">event</span><span class="s2">.</span><span class="s1">ActionListener</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javax</span><span class="s2">.</span><span class="s1">swing</span><span class="s2">.*;</span>
+
+<span class="s3">/**</span>
+ <span class="s3">* </span><span class="s4">@author </span><span class="s3">jordan silva (@jsilvalopez23@georgeofx.edu)</span>
+ <span class="s3">* a valentines day program that generates a valentines day proposal</span>
+ <span class="s3">* All used by a graphic user interface</span>
+ <span class="s3">*/</span>
+<span class="s0">public class </span><span class="s1">valentines </span><span class="s0">extends </span><span class="s1">JFrame</span>
+<span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">JButton button</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">JLabel label</span><span class="s2">;</span>
+    <span class="s0">private static final int </span><span class="s1">FRAME_WIDTH </span><span class="s2">= </span><span class="s5">300</span><span class="s2">;</span>
+    <span class="s0">private static final int </span><span class="s1">FRAME_HEIGHT </span><span class="s2">= </span><span class="s5">500</span><span class="s2">;</span>
+    <span class="s1">JFrame frame</span><span class="s2">;</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* a constructor that calls the components method</span>
+     <span class="s3">*</span>
+     <span class="s3">*/</span>
+    <span class="s0">public </span><span class="s1">valentines</span><span class="s2">()</span>
+    <span class="s2">{</span>
+        <span class="s6">// declare the constructor by calling the create components method</span>
+        <span class="s1">createComponents</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">An action listener that changes the label text.</span>
+     <span class="s3">generates the message dialog corresponding to the button</span>
+     <span class="s3">*/</span>
+    <span class="s0">class </span><span class="s1">ClickListener </span><span class="s0">implements </span><span class="s1">ActionListener</span>
+    <span class="s2">{</span>
+        <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent event</span><span class="s2">)</span>
+        <span class="s2">{</span>
+            <span class="s6">//J option displays first message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;❤️hey baby i got something to tell you&quot;</span><span class="s2">);</span>
+            <span class="s6">//J option displays second message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;🥰I just feel grateful that God has&quot; </span><span class="s2">+</span>
+                    <span class="s7">&quot;blessed me by adding you into my life&quot;</span><span class="s2">);</span>
+            <span class="s6">// J option displays 3rd message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;I have some days where i go &quot; </span><span class="s2">+</span>
+                    <span class="s7">&quot;through the darkest seasons that pours hard on me🌧️&quot;</span><span class="s2">);</span>
+            <span class="s6">//J option displays 4th message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;But you always shine a light to make&quot; </span><span class="s2">+</span>
+                    <span class="s7">&quot;my day even better☀️&quot;</span><span class="s2">);</span>
+            <span class="s6">//J option displays 5th message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;Love has taught me so far that its not&quot; </span><span class="s2">+</span>
+                    <span class="s7">&quot;just about looking at the outward appearance but to connect with the inner&quot; </span><span class="s2">+</span>
+                    <span class="s7">&quot;beauty of you🥺 &quot;</span><span class="s2">);</span>
+            <span class="s6">//J option displays 6th message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;I've worked on this project for a while&quot; </span><span class="s2">+</span>
+                    <span class="s7">&quot;and i think its a good time to ask you this&quot;</span><span class="s2">);</span>
+            <span class="s6">//J option displays 7th message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;so to my baby who lives on the other side&quot; </span><span class="s2">+</span>
+                    <span class="s7">&quot;of the hemisphere&quot;</span><span class="s2">);</span>
+            <span class="s6">// J option displays 8th message</span>
+            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;would you be my valentines❤️&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* method creates the components for the frame object</span>
+     <span class="s3">* must have panel and buttons for it to work</span>
+     <span class="s3">* get the action listener for the button corresponding</span>
+     <span class="s3">*/</span>
+    <span class="s0">private void </span><span class="s1">createComponents</span><span class="s2">()</span>
+    <span class="s2">{</span>
+        <span class="s6">// assign the frame to a new jframe</span>
+        <span class="s1">frame </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JFrame</span><span class="s2">();</span>
+        <span class="s6">// j option pane shows a message before displaying the gui frame</span>
+        <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">,</span><span class="s7">&quot;You are about to open the valentines message+&quot; </span><span class="s2">+</span>
+                <span class="s7">&quot;click ok to continue&quot;</span><span class="s2">);</span>
+        <span class="s6">// make a new button</span>
+        <span class="s1">button </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s7">&quot;Click here to reedem your valentines message&quot;</span><span class="s2">);</span>
+        <span class="s6">// call the action listener for the button</span>
+        <span class="s1">ActionListener listener </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ClickListener</span><span class="s2">();</span>
+        <span class="s6">// the button then adds the listener to itself</span>
+        <span class="s1">button</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s1">listener</span><span class="s2">);</span>
+        <span class="s6">// label prints message displaying a message to the users significant other</span>
+        <span class="s1">label </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s7">&quot;Please click the button my love</span><span class="s0">\n </span><span class="s7">and see for yourself&quot; </span><span class="s2">+</span>
+                <span class="s7">&quot;🥹&quot;</span><span class="s2">);</span>
+        <span class="s6">// create the panel and its following components</span>
+        <span class="s1">JPanel panel </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">();</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">button</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">label</span><span class="s2">);</span>
+        <span class="s1">add</span><span class="s2">(</span><span class="s1">panel</span><span class="s2">);</span>
+
+        <span class="s6">/* after we make a panel and buttons we now add all of this 
+        to the frame 
+         */</span>
+        <span class="s1">frame</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">panel</span><span class="s2">);</span>
+        <span class="s1">frame</span><span class="s2">.</span><span class="s1">setSize</span><span class="s2">(</span><span class="s1">FRAME_WIDTH</span><span class="s2">,</span><span class="s1">FRAME_HEIGHT</span><span class="s2">);</span>
+        <span class="s1">frame</span><span class="s2">.</span><span class="s1">setDefaultCloseOperation</span><span class="s2">(</span><span class="s1">JFrame</span><span class="s2">.</span><span class="s1">EXIT_ON_CLOSE</span><span class="s2">);</span>
+        <span class="s1">frame</span><span class="s2">.</span><span class="s1">setVisible</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* a main method that hold an array of arguments</span>
+     <span class="s3">* </span><span class="s4">@param </span><span class="s3">args the args in array of string</span>
+     <span class="s3">*/</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">)</span>
+    <span class="s2">{</span>
+        <span class="s6">// make a valentines object</span>
+       <span class="s1">valentines val </span><span class="s2">= </span><span class="s0">new </span><span class="s1">valentines</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
