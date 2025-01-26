@@ -1,131 +1,107 @@
-<html>
-<head>
-<title>valentines.java</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-.s0 { color: #cf8e6d;}
-.s1 { color: #bcbec4;}
-.s2 { color: #bcbec4;}
-.s3 { color: #5f826b; font-style: italic;}
-.s4 { color: #67a37c; font-style: italic;}
-.s5 { color: #2aacb8;}
-.s6 { color: #7a7e85;}
-.s7 { color: #6aab73;}
-</style>
-</head>
-<body bgcolor="#1e1f22">
-<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
-<tr><td><center>
-<font face="Arial, Helvetica" color="#000000">
-valentines.java</font>
-</center></td></tr></table>
-<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.</span><span class="s1">event</span><span class="s2">.</span><span class="s1">ActionEvent</span><span class="s2">;</span>
-<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.</span><span class="s1">event</span><span class="s2">.</span><span class="s1">ActionListener</span><span class="s2">;</span>
-<span class="s0">import </span><span class="s1">javax</span><span class="s2">.</span><span class="s1">swing</span><span class="s2">.*;</span>
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
 
-<span class="s3">/**</span>
- <span class="s3">* </span><span class="s4">@author </span><span class="s3">jordan silva (@jsilvalopez23@georgeofx.edu)</span>
- <span class="s3">* a valentines day program that generates a valentines day proposal</span>
- <span class="s3">* All used by a graphic user interface</span>
- <span class="s3">*/</span>
-<span class="s0">public class </span><span class="s1">valentines </span><span class="s0">extends </span><span class="s1">JFrame</span>
-<span class="s2">{</span>
-    <span class="s0">private </span><span class="s1">JButton button</span><span class="s2">;</span>
-    <span class="s0">private </span><span class="s1">JLabel label</span><span class="s2">;</span>
-    <span class="s0">private static final int </span><span class="s1">FRAME_WIDTH </span><span class="s2">= </span><span class="s5">300</span><span class="s2">;</span>
-    <span class="s0">private static final int </span><span class="s1">FRAME_HEIGHT </span><span class="s2">= </span><span class="s5">500</span><span class="s2">;</span>
-    <span class="s1">JFrame frame</span><span class="s2">;</span>
+/**
+ * @author jordan silva (@jsilvalopez23@georgeofx.edu)
+ * a valentines day program that generates a valentines day proposal
+ * All used by a graphic user interface
+ */
+public class valentines extends JFrame
+{
+    private JButton button;
+    private JLabel label;
+    private static final int FRAME_WIDTH = 300;
+    private static final int FRAME_HEIGHT = 500;
+    JFrame frame;
 
-    <span class="s3">/**</span>
-     <span class="s3">* a constructor that calls the components method</span>
-     <span class="s3">*</span>
-     <span class="s3">*/</span>
-    <span class="s0">public </span><span class="s1">valentines</span><span class="s2">()</span>
-    <span class="s2">{</span>
-        <span class="s6">// declare the constructor by calling the create components method</span>
-        <span class="s1">createComponents</span><span class="s2">();</span>
-    <span class="s2">}</span>
+    /**
+     * a constructor that calls the components method
+     *
+     */
+    public valentines()
+    {
+        // declare the constructor by calling the create components method
+        createComponents();
+    }
 
-    <span class="s3">/**</span>
-     <span class="s3">An action listener that changes the label text.</span>
-     <span class="s3">generates the message dialog corresponding to the button</span>
-     <span class="s3">*/</span>
-    <span class="s0">class </span><span class="s1">ClickListener </span><span class="s0">implements </span><span class="s1">ActionListener</span>
-    <span class="s2">{</span>
-        <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent event</span><span class="s2">)</span>
-        <span class="s2">{</span>
-            <span class="s6">//J option displays first message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;❤️hey baby i got something to tell you&quot;</span><span class="s2">);</span>
-            <span class="s6">//J option displays second message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;🥰I just feel grateful that God has&quot; </span><span class="s2">+</span>
-                    <span class="s7">&quot;blessed me by adding you into my life&quot;</span><span class="s2">);</span>
-            <span class="s6">// J option displays 3rd message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;I have some days where i go &quot; </span><span class="s2">+</span>
-                    <span class="s7">&quot;through the darkest seasons that pours hard on me🌧️&quot;</span><span class="s2">);</span>
-            <span class="s6">//J option displays 4th message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;But you always shine a light to make&quot; </span><span class="s2">+</span>
-                    <span class="s7">&quot;my day even better☀️&quot;</span><span class="s2">);</span>
-            <span class="s6">//J option displays 5th message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;Love has taught me so far that its not&quot; </span><span class="s2">+</span>
-                    <span class="s7">&quot;just about looking at the outward appearance but to connect with the inner&quot; </span><span class="s2">+</span>
-                    <span class="s7">&quot;beauty of you🥺 &quot;</span><span class="s2">);</span>
-            <span class="s6">//J option displays 6th message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;I've worked on this project for a while&quot; </span><span class="s2">+</span>
-                    <span class="s7">&quot;and i think its a good time to ask you this&quot;</span><span class="s2">);</span>
-            <span class="s6">//J option displays 7th message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;so to my baby who lives on the other side&quot; </span><span class="s2">+</span>
-                    <span class="s7">&quot;of the hemisphere&quot;</span><span class="s2">);</span>
-            <span class="s6">// J option displays 8th message</span>
-            <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">, </span><span class="s7">&quot;would you be my valentines❤️&quot;</span><span class="s2">);</span>
-        <span class="s2">}</span>
-    <span class="s2">}</span>
+    /**
+     An action listener that changes the label text.
+     generates the message dialog corresponding to the button
+     */
+    class ClickListener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent event)
+        {
+            //J option displays first message
+            JOptionPane.showMessageDialog(frame, "❤️hey baby i got something to tell you");
+            //J option displays second message
+            JOptionPane.showMessageDialog(frame, "🥰I just feel grateful that God has" +
+                    "blessed me by adding you into my life");
+            // J option displays 3rd message
+            JOptionPane.showMessageDialog(frame, "I have some days where i go " +
+                    "through the darkest seasons that pours hard on me🌧️");
+            //J option displays 4th message
+            JOptionPane.showMessageDialog(frame, "But you always shine a light to make" +
+                    "my day even better☀️");
+            //J option displays 5th message
+            JOptionPane.showMessageDialog(frame, "Love has taught me so far that its not" +
+                    "just about looking at the outward appearance but to connect with the inner" +
+                    "beauty of you🥺 ");
+            //J option displays 6th message
+            JOptionPane.showMessageDialog(frame, "I've worked on this project for a while" +
+                    "and i think its a good time to ask you this");
+            //J option displays 7th message
+            JOptionPane.showMessageDialog(frame, "so to my baby who lives on the other side" +
+                    "of the hemisphere");
+            // J option displays 8th message
+            JOptionPane.showMessageDialog(frame, "would you be my valentines❤️");
+        }
+    }
 
-    <span class="s3">/**</span>
-     <span class="s3">* method creates the components for the frame object</span>
-     <span class="s3">* must have panel and buttons for it to work</span>
-     <span class="s3">* get the action listener for the button corresponding</span>
-     <span class="s3">*/</span>
-    <span class="s0">private void </span><span class="s1">createComponents</span><span class="s2">()</span>
-    <span class="s2">{</span>
-        <span class="s6">// assign the frame to a new jframe</span>
-        <span class="s1">frame </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JFrame</span><span class="s2">();</span>
-        <span class="s6">// j option pane shows a message before displaying the gui frame</span>
-        <span class="s1">JOptionPane</span><span class="s2">.</span><span class="s1">showMessageDialog</span><span class="s2">(</span><span class="s1">frame</span><span class="s2">,</span><span class="s7">&quot;You are about to open the valentines message+&quot; </span><span class="s2">+</span>
-                <span class="s7">&quot;click ok to continue&quot;</span><span class="s2">);</span>
-        <span class="s6">// make a new button</span>
-        <span class="s1">button </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s7">&quot;Click here to reedem your valentines message&quot;</span><span class="s2">);</span>
-        <span class="s6">// call the action listener for the button</span>
-        <span class="s1">ActionListener listener </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ClickListener</span><span class="s2">();</span>
-        <span class="s6">// the button then adds the listener to itself</span>
-        <span class="s1">button</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s1">listener</span><span class="s2">);</span>
-        <span class="s6">// label prints message displaying a message to the users significant other</span>
-        <span class="s1">label </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s7">&quot;Please click the button my love</span><span class="s0">\n </span><span class="s7">and see for yourself&quot; </span><span class="s2">+</span>
-                <span class="s7">&quot;🥹&quot;</span><span class="s2">);</span>
-        <span class="s6">// create the panel and its following components</span>
-        <span class="s1">JPanel panel </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">();</span>
-        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">button</span><span class="s2">);</span>
-        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">label</span><span class="s2">);</span>
-        <span class="s1">add</span><span class="s2">(</span><span class="s1">panel</span><span class="s2">);</span>
+    /**
+     * method creates the components for the frame object
+     * must have panel and buttons for it to work
+     * get the action listener for the button corresponding
+     */
+    private void createComponents()
+    {
+        // assign the frame to a new jframe
+        frame = new JFrame();
+        // j option pane shows a message before displaying the gui frame
+        JOptionPane.showMessageDialog(frame,"You are about to open the valentines message+" +
+                "click ok to continue");
+        // make a new button
+        button = new JButton("Click here to reedem your valentines message");
+        // call the action listener for the button
+        ActionListener listener = new ClickListener();
+        // the button then adds the listener to itself
+        button.addActionListener(listener);
+        // label prints message displaying a message to the users significant other
+        label = new JLabel("Please click the button my love\n and see for yourself" +
+                "🥹");
+        // create the panel and its following components
+        JPanel panel = new JPanel();
+        panel.add(button);
+        panel.add(label);
+        add(panel);
 
-        <span class="s6">/* after we make a panel and buttons we now add all of this 
-        to the frame 
-         */</span>
-        <span class="s1">frame</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">panel</span><span class="s2">);</span>
-        <span class="s1">frame</span><span class="s2">.</span><span class="s1">setSize</span><span class="s2">(</span><span class="s1">FRAME_WIDTH</span><span class="s2">,</span><span class="s1">FRAME_HEIGHT</span><span class="s2">);</span>
-        <span class="s1">frame</span><span class="s2">.</span><span class="s1">setDefaultCloseOperation</span><span class="s2">(</span><span class="s1">JFrame</span><span class="s2">.</span><span class="s1">EXIT_ON_CLOSE</span><span class="s2">);</span>
-        <span class="s1">frame</span><span class="s2">.</span><span class="s1">setVisible</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
-    <span class="s2">}</span>
+        /* after we make a panel and buttons we now add all of this
+        to the frame
+         */
+        frame.add(panel);
+        frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
 
-    <span class="s3">/**</span>
-     <span class="s3">* a main method that hold an array of arguments</span>
-     <span class="s3">* </span><span class="s4">@param </span><span class="s3">args the args in array of string</span>
-     <span class="s3">*/</span>
-    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">)</span>
-    <span class="s2">{</span>
-        <span class="s6">// make a valentines object</span>
-       <span class="s1">valentines val </span><span class="s2">= </span><span class="s0">new </span><span class="s1">valentines</span><span class="s2">();</span>
-    <span class="s2">}</span>
-<span class="s2">}</span>
-</pre>
-</body>
-</html>
+    /**
+     * a main method that hold an array of arguments
+     * @param args the args in array of string
+     */
+    public static void main(String[] args)
+    {
+        // make a valentines object
+       valentines val = new valentines();
+    }
+}
