@@ -1,0 +1,107 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+/**
+ * @author jordan silva (@jsilvalopez23@georgeofx.edu)
+ * a valentines day program that generates a valentines day proposal
+ * All used by a graphic user interface
+ */
+public class valentines extends JFrame
+{
+    private JButton button;
+    private JLabel label;
+    private static final int FRAME_WIDTH = 300;
+    private static final int FRAME_HEIGHT = 500;
+    JFrame frame;
+
+    /**
+     * a constructor that calls the components method
+     *
+     */
+    public valentines()
+    {
+        // declare the constructor by calling the create components method
+        createComponents();
+    }
+
+    /**
+     An action listener that changes the label text.
+     generates the message dialog corresponding to the button
+     */
+    class ClickListener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent event)
+        {
+            //J option displays first message
+            JOptionPane.showMessageDialog(frame, "❤️hey baby i got something to tell you");
+            //J option displays second message
+            JOptionPane.showMessageDialog(frame, "🥰I just feel grateful that God has" +
+                    "blessed me by adding you into my life");
+            // J option displays 3rd message
+            JOptionPane.showMessageDialog(frame, "I have some days where i go " +
+                    "through the darkest seasons that pours hard on me🌧️");
+            //J option displays 4th message
+            JOptionPane.showMessageDialog(frame, "But you always shine a light to make" +
+                    "my day even better☀️");
+            //J option displays 5th message
+            JOptionPane.showMessageDialog(frame, "Love has taught me so far that its not" +
+                    "just about looking at the outward appearance but to connect with the inner" +
+                    "beauty of you🥺 ");
+            //J option displays 6th message
+            JOptionPane.showMessageDialog(frame, "I've worked on this project for a while" +
+                    "and i think its a good time to ask you this");
+            //J option displays 7th message
+            JOptionPane.showMessageDialog(frame, "so to my baby who lives on the other side" +
+                    "of the hemisphere");
+            // J option displays 8th message
+            JOptionPane.showMessageDialog(frame, "would you be my valentines❤️");
+        }
+    }
+
+    /**
+     * method creates the components for the frame object
+     * must have panel and buttons for it to work
+     * get the action listener for the button corresponding
+     */
+    private void createComponents()
+    {
+        // assign the frame to a new jframe
+        frame = new JFrame();
+        // j option pane shows a message before displaying the gui frame
+        JOptionPane.showMessageDialog(frame,"You are about to open the valentines message+" +
+                "click ok to continue");
+        // make a new button
+        button = new JButton("Click here to reedem your valentines message");
+        // call the action listener for the button
+        ActionListener listener = new ClickListener();
+        // the button then adds the listener to itself
+        button.addActionListener(listener);
+        // label prints message displaying a message to the users significant other
+        label = new JLabel("Please click the button my love\n and see for yourself" +
+                "🥹");
+        // create the panel and its following components
+        JPanel panel = new JPanel();
+        panel.add(button);
+        panel.add(label);
+        add(panel);
+
+        /* after we make a panel and buttons we now add all of this
+        to the frame
+         */
+        frame.add(panel);
+        frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+
+    /**
+     * a main method that hold an array of arguments
+     * @param args the args in array of string
+     */
+    public static void main(String[] args)
+    {
+        // make a valentines object
+        valentines val = new valentines();
+    }
+}
